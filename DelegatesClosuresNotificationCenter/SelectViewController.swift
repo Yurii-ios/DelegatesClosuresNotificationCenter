@@ -10,6 +10,10 @@ import UIKit
 
 class SelectViewController: UIViewController {
 
+	private let neo = UIImage(named: "neo")
+	private let agentSmith = UIImage(named: "agentSmith")
+	private let trueText = "Вы узнали правду"
+	private let falseText = "Вы не узнали правду"
 
 	@IBOutlet weak var blueButton: UIButton!
 	@IBOutlet weak var redButton: UIButton!
