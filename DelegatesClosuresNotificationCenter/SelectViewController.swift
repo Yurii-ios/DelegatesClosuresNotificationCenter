@@ -15,14 +15,21 @@ class SelectViewController: UIViewController {
 	private let trueText = "Вы узнали правду"
 	private let falseText = "Вы не узнали правду"
 
+	//var completion: ((String, UIImage?) -> ())?
+	weak var matrixDelegate: MatrixDelegate?
+
 	@IBOutlet weak var blueButton: UIButton!
 	@IBOutlet weak var redButton: UIButton!
 
 	@IBAction func blueTapped(_ sender: UIButton) {
+		//completion?(falseText, agentSmith)
+		matrixDelegate?.update(label: falseText, image: agentSmith)
 		self.dismiss(animated: true, completion: nil)
 	}
 
 	@IBAction func redTapped(_ sender: UIButton) {
+		//completion?(trueText, neo)
+		matrixDelegate?.update(label: trueText, image: neo)
 		self.dismiss(animated: true, completion: nil)
 	}
 	
